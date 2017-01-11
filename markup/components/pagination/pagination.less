@@ -1,0 +1,62 @@
+.pagination {
+    display: flex;
+    align-items: center;
+
+    font-size: 12px;
+
+    &__pages {
+        display: none;
+        margin-right: 31px;
+
+        @media @mob {
+            display: block;
+
+            color: #848484;
+        }
+    }
+
+    &__list {
+        .nl();
+    }
+
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+
+        @media @mob {
+            margin-right: 7px;
+        }
+    }
+
+    &__link {
+        display: block;
+        width: 34px;
+
+        text-align: center;
+        line-height: 34px;
+        text-decoration: none;
+        color: inherit;
+
+        border-radius: 50%;
+        transition: background .5s;
+
+        &_active,
+        &:hover {
+            background-color: #e6e6e6;
+            font-weight: 700;
+        }
+
+        &_next {
+            width: auto;
+            padding-left: 13px;
+
+            letter-spacing: 1px;
+
+            background-color: inherit;
+
+            &:hover {
+                background-color: inherit;
+            }
+        }
+    }
+}

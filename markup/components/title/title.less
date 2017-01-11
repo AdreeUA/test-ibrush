@@ -1,0 +1,50 @@
+.title {
+    position: relative;
+
+    margin: 0 0 11px;
+
+    font-size: 18px;
+    font-family: @font-3;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+
+    @media @mob {
+        margin: 0 0 15px;
+
+        font-size: 28px;
+    }
+
+    @media @tablets {
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 2;
+
+        display: inline-block;
+        margin: 0;
+        padding-right: 18px;
+
+        background-color: #fff;
+
+        vertical-align: top;
+
+        @media @tablets {
+            padding-right: 6px;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        bottom: 9px;
+        left: 0;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: currentColor;
+
+        content: '';
+    }
+}

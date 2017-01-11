@@ -1,0 +1,20 @@
+{
+    "folders": [
+        {
+            "name": "data",
+            "files": [
+                {
+                    "name": "data.js",
+                    "content": "var data = {__componentName__: {}}"
+                }
+            ]
+        }
+    ],
+
+    "files": [
+        {
+            "name": "__componentName__.__cssExtension__",
+            "content": ".__componentName__ {}"
+        }
+    ]
+}

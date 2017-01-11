@@ -1,0 +1,226 @@
+.gallery {
+    position: relative;
+
+    margin-bottom: 12px;
+    margin-left: -@gutter/2;
+    margin-right: -@gutter/2;
+
+    font-size: 0;
+
+    @media @mob {
+        margin-bottom: 22px;
+        margin-left: -@gutter-mob/2;
+        margin-right: -@gutter-mob/2;
+    }
+
+    @media @tablets {
+        margin-bottom: 15px;
+        margin-left: -@gutter-tablet/2;
+        margin-right: -@gutter-tablet/2;
+    }
+
+    &__item {
+        display: inline-block;
+        width: 25%;
+        padding-top: 16%;
+        border: @gutter/2 solid #fff;
+
+        vertical-align: top;
+
+        font-size: 14px;
+        font-family: @font-2;
+        text-align: center;
+
+        background-size: cover;
+        background-position: center center;
+
+        &:nth-of-type(1n+25) {
+            display: none;
+        }
+
+        &_large {
+            width: 100%;
+            padding-top: 63%;
+        }
+
+        &_date {
+            padding-top: 3px;
+        }
+
+        &_first-date {
+            position: absolute;
+            top: 6px;
+            left: 8px;
+
+            padding-top: 6px;
+            padding-bottom: 6px;
+
+            background-color: rgba(255,255,255, .8);
+            border: none;
+
+            .gallery__day {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+        &_height {
+            display: none;
+        }
+
+        @media @mob {
+            width: 20%;
+            padding-top: 12%;
+
+            border-width: @gutter-mob;
+
+            &:nth-of-type(1n+25) {
+                display: inline-block;
+            }
+
+            &_first-date {
+                top: 15px;
+                left: 15px;
+
+                width: 18%;
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
+
+            &_large {
+                width: 100%;
+                padding-top: 64.5%;
+            }
+
+            &_date {
+                padding-top: 5px;
+            }
+
+            &_height {
+                display: block;
+                float: right;
+                width: 37%;
+                padding-top: 50%;
+            }
+        }
+
+        @media @tablets {
+            width: 25%;
+            padding-top: 15%;
+
+            font-size: 19px;
+
+            border-width: @gutter-tablet;
+
+            &_large {
+                width: 100%;
+                padding-top: 64%;
+            }
+
+            &_first-date {
+                top: 29px;
+                left: 29px;
+
+                width: 22.5%;
+                padding-top: 19px;
+                padding-bottom: 17px;
+
+                .gallery__day {
+                    &::before {
+                        display: block;
+                        right: 20px;
+                    }
+                }
+            }
+
+            &_date {
+                padding-top: 32px;
+            }
+
+            &_height {
+                width: 25%;
+                padding-top: 31%;
+            }
+        }
+    }
+
+    &__disc {
+        display: none;
+
+        @media @tablets {
+            position: relative;
+
+            display: block;
+            padding: 6px @gutter-tablet 7px;
+
+            font-size: 13px;
+
+            &::before {
+                position: absolute;
+                left: 50%;
+                top: -15px;
+
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 18px 18px 18px;
+                border-color: transparent transparent #fff transparent;
+                transform: translateX(-50%);
+
+                content: '';
+
+            }
+        }
+    }
+
+    &__text {
+        font-weight: 700;
+        letter-spacing: .1px;
+    }
+
+    &__tag {
+        color: #acacac;
+    }
+
+    &__day {
+        position: relative;
+
+        display: block;
+
+        font-size: 18px;
+        line-height: 1.2;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: 6px;
+
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 3px 0 3px 5px;
+            border-color: transparent transparent transparent currentColor;
+            transform: translateY(-50%);
+
+
+            content: '';
+        }
+
+        @media @tablets {
+            font-size: 32px;
+
+            &::before {
+                right: 15px;
+            }
+        }
+    }
+
+    &__advertising {
+        margin: 5px @gutter 6px;
+
+        @media @mob {
+            display: none;
+        }
+    }
+}
